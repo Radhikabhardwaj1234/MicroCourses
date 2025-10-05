@@ -7,7 +7,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('learner');
-  const [adminSecret, setAdminSecret] = useState(''); // ✅ added
+  const [adminSecret, setAdminSecret] = useState('supersecurekey123'); // ✅ added
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
@@ -83,7 +83,7 @@ const Register = () => {
               className="form-control"
               value={adminSecret}
               onChange={(e) => setAdminSecret(e.target.value)}
-              required
+              disabled
             />
           </div>
         )}
@@ -97,3 +97,4 @@ const Register = () => {
 };
 
 export default Register;
+
