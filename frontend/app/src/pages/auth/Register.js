@@ -88,8 +88,6 @@ const Register = () => {
           </div>
         )}
 
-       // admin key already added for testing purposes so that the user can also become admin in order to test the website
-
         <button type="submit" className="btn btn-success">
           Register
         </button>
@@ -99,5 +97,6 @@ const Register = () => {
 };
 
 export default Register;
+
 
 
