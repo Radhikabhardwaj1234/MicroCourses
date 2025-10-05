@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://microcourses-2ise.onrender.com/api',
   withCredentials: true
 });
 
@@ -15,3 +15,4 @@ instance.interceptors.request.use((config) => {
 });
 
 export default instance;
+
