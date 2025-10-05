@@ -14,7 +14,7 @@ connectDB();
 // Middlewares
 app.use(helmet()); // security headers
 app.use(cors({
-  origin: process.env.CLIENT_URL, // frontend URL, can update later
+  origin: 'https://microcourses-frontend-4azj.onrender.com, // frontend URL, can update later
   credentials: true,               // allow cookies
 }));
 app.use(express.json());  // parse JSON request bodies
@@ -44,3 +44,4 @@ app.use((err, req, res, next) => {
 });
 
 module.exports = app;
+
