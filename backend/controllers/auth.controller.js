@@ -43,7 +43,7 @@ exports.register = async (req, res) => {
     // Set HTTP-only cookie
     res.cookie('token', token, {
       httpOnly: true,
-      secure: false, // set true in production with HTTPS
+      secure: true, // set true in production with HTTPS
       maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
     });
 
@@ -90,7 +90,7 @@ exports.login = async (req, res) => {
     // Set HTTP-only cookie
     res.cookie('token', token, {
       httpOnly: true,
-      secure: false, // true in production with HTTPS
+      secure: true, // true in production with HTTPS
       maxAge: 7 * 24 * 60 * 60 * 1000 // 7 days
     });
 
@@ -116,7 +116,7 @@ exports.logout = (req, res) => {
   try {
     res.clearCookie('token', {
       httpOnly: true,
-      secure: false, // set true in production with HTTPS
+      secure: true, // set true in production with HTTPS
     });
 
     res.status(200).json({ message: 'Logout successful' });
@@ -145,4 +145,5 @@ exports.getMe = async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
+
 
